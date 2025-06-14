@@ -79,7 +79,10 @@ jobs:
       #──────────────────── Terraform Plan ──────────────────────
       - name: Terraform Plan
         id: plan
-        if: github.event_name == 'pull_request' || github.event.inputs.action == 'plan'
+        if: |
+          github.event_name == 'pull_request' ||
+          github.event.inputs.action == 'plan' ||
+          github.event.inputs.action == 'apply'
         run: terraform plan -no-color -out=tfplan
 
       - name: Comment plan on PR
