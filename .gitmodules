@@ -1,0 +1,3 @@
+[submodule "devops-lab01-aws-terraform"]
+	path = devops-lab01-aws-terraform
+	url = https://github.com/Cazo04/devops-lab01-aws-terraform
